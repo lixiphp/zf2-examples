@@ -38,8 +38,14 @@ class AccountController extends AbstractActionController
 
         // This is the special code that protects our form being submitted from automated scripts
         $form->add(array(
-                'name' => 'csrf',
                 'type' => 'Zend\Form\Element\Csrf',
+                'name' => 'csrf',
+                'options' => array(
+                    'csrf_options' => array(
+                        'timeout' => 600,
+                        'salt' => 'unique'
+                    )
+                )
         ));
 
         // This is the submit button

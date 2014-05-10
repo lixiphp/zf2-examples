@@ -7,6 +7,10 @@ echo $this->form()->openTag($this->form1);
 echo '<fieldset>';
 
 foreach($this->form1 as $element) {
+    if($element instanceof Zend\Form\Element\Csrf) {
+        echo $this->formelement($element);
+        continue;
+    }
 	if(!($element instanceof Zend\Form\Element\Submit)) {
 ?>
     <div class="control-group">

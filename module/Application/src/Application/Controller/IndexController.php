@@ -26,6 +26,20 @@ class IndexController extends AbstractActionController
 
     public function aboutAction()
     {
-        return array();
+        $layout = new ViewModel();
+        $layout->setTemplate('layout/layout');
+
+        //change the layout
+        $this->layout()->setTemplate("layout/layout_new");
+
+        $viewModel = new ViewModel();
+        $viewModel->setVariable('version', '0.0.2');
+        $viewModel->setVariable('applicationName', 'Training Center!');
+        $viewModel->setTemplate('application/index/index');
+        //terminal output.
+        //$viewModel->setTerminal(true);
+
+        //$layout->addChild($viewModel, 'content');
+        return $viewModel;
     }
 }
