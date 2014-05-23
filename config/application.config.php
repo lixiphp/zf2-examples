@@ -11,6 +11,7 @@ return array(
         //'Exam',
         'Album',
         'Albumorm',
+        'Manual'
     ),
 
     // These are various options for the listeners attached to the ModuleManager
