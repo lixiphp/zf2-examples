@@ -32,8 +32,8 @@
                     <div class="nav-collapse collapse">
                     	<ul class="nav">
 <?php 
-        $navHelper = $this->navigation('navigation');
-        $containers = $navHelper->getContainer(); 
+        //$navHelper = $this->navigation('navigation');
+        //$containers = $navHelper->getContainer();
         foreach($containers->getPages() as $page) {
             $class = "";
             if ($page->isActive()) {
@@ -70,8 +70,8 @@
                 </div>
             </div>
         </div>
-        
-<?php 
+
+<?php
 $namespaces = array ('error','success','info','default');
 foreach ($namespaces as $namespace) {
 	$flashMessages = $this->flashmessenger()->render($namespace);
@@ -88,6 +88,10 @@ foreach ($namespaces as $namespace) {
         
         
         <div class="container">
+            <div class="breadcrumb">
+                <?php echo $this->navigation('breadcrumb')->breadcrumbs()->setMinDepth(0); ?>
+            </div>
+
             <?php echo $this->content; ?>
             <hr>
             <footer>

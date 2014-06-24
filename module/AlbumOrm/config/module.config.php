@@ -36,7 +36,7 @@ return array(
     // View setup for this module
     'view_manager' => array(
         'template_path_stack' => array(
-            'albumorm' => __DIR__ . '/../view',
+            __DIR__ . '/../view',
         ),
     ),
 

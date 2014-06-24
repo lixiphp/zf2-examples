@@ -54,6 +54,7 @@ return array(
             'factory_by_class' => 'Manual\Service\Factory\FactoryByClass',
             // registering a factory instance
             'factory_by_instance' => new Manual\Service\Factory\FactoryByClass(),
+            'breadcrumb' => 'Manual\Service\Factory\BreadcrumbNavigationFactory',
         ),
         'aliases' => array(
             'alias_translator' => 'MvcTranslator',
@@ -73,6 +74,7 @@ return array(
             'Manual\Controller\Index' => 'Manual\Controller\IndexController',
             'Manual\Controller\Service' => 'Manual\Controller\ServiceController',
             'Manual\Controller\Mvc' => 'Manual\Controller\MvcController',
+            'Manual\Controller\Navigation' => 'Manual\Controller\NavigationController',
         ),
     ),
     /*'view_manager' => array(
@@ -93,7 +95,31 @@ return array(
     ),*/
     'view_manager' => array(
         'template_path_stack' => array(
-            'album' => __DIR__ . '/../view',
+            __DIR__ . '/../view',
+        ),
+    ),
+    'navigation' => array(
+        'breadcrumb' => array(
+            'home' => array(
+                'label' => '手册首页',
+                'route' => 'manual',
+                'pages' => array(
+                    'project' => array(
+                        'label' => '导航管理',
+                        'route' => 'manual/default',
+                        'controller' => 'navigation',
+                        'action' => 'index',
+                        'pages' => array(
+                            array(
+                                'label' => '导航列表',
+                                'route' => 'manual/default',
+                                'controller' => 'navigation',
+                                'action' => 'list',
+                            ),
+                        ),
+                    ),
+                ),
+            ),
         ),
     ),
 );
