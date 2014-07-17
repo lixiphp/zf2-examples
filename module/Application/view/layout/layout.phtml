@@ -32,8 +32,8 @@
                     <div class="nav-collapse collapse">
                     	<ul class="nav">
 <?php 
-        //$navHelper = $this->navigation('navigation');
-        //$containers = $navHelper->getContainer();
+        $navHelper = $this->navigation('navigation');
+        $containers = $navHelper->getContainer();
         foreach($containers->getPages() as $page) {
             $class = "";
             if ($page->isActive()) {

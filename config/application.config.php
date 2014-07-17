@@ -5,6 +5,9 @@ return array(
         'Application',
         'DoctrineModule',
         'DoctrineORMModule',
+        'DoctrineMongoODMModule',
+
+
         //'ZendDeveloperTools',
         //'Debug',
         'User',
