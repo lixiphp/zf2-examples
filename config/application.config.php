@@ -13,9 +13,9 @@ return array(
         'DoctrineMongoODMModule',
         'User',
         'Album',
-        //'Albumorm',
         'Manual',
-        'DoctrineOrm'
+        'DoctrineOrm',
+        'DoctrineOdm'
     ),
     'module_listener_options' => array(
         'module_paths' => array(
