@@ -29,7 +29,7 @@ return array(
         ),
     ),
     //Albumorm
-    'doctrine' => array(
+    /*'doctrine' => array(
         'connection' => array(
             // default connection name
             'orm_default' => array(
@@ -43,5 +43,5 @@ return array(
                 )
             )
         )
-    ),
+    ),*/
 );

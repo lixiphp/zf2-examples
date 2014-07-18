@@ -1,0 +1,31 @@
+DoctrineOrm\Model\Sms:
+  type: entity
+  table: sms
+  id:
+    id:
+      type: integer
+      generator:
+        strategy: AUTO
+  fields:
+    ip:
+      type: string
+      length: 255
+      nullable: true
+    code:
+      type: string
+      length: 255
+    phone:
+      type: string
+      length: 255
+    created:
+      type: datetime
+      nullable: true
+    lifetime:
+      type: integer
+      nullable: true
+    active:
+      type: integer
+      nullable: true
+    data:
+      type: json_array
+      nullable: true

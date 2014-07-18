@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doctrine-mongo-mapping xmlns="http://doctrine-project.org/schemas/odm/doctrine-mongo-mapping"
+                        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                        xsi:schemaLocation="http://doctrine-project.org/schemas/odm/doctrine-mongo-mapping
+http://doctrine-project.org/schemas/odm/doctrine-mongo-mapping.xsd">
+
+    <mapped-superclass name="ZfcUserDoctrineMongoODM\Document\UserMappedSuperClass" collection="user">
+
+        <field fieldName="id" id="true" />
+
+        <field fieldName="username" type="string" unique="true" nullable="true" />
+        <field fieldName="email" type="string" unique="true" length="100" />
+        <field fieldName="display_name" type="string" length="50" nullable="true" />
+        <field fieldName="password" type="string" length="128" />
+
+    </mapped-superclass>
+
+</doctrine-mongo-mapping>
